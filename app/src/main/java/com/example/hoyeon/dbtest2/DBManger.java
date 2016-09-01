@@ -17,7 +17,7 @@ public class DBManger extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL();
+        db.execSQL("CREATE TABLE DBTEST1(_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT,  age INTEGER, )");
 
 
     }
@@ -26,4 +26,8 @@ public class DBManger extends SQLiteOpenHelper {
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
 
     }
+
+
+
+
 }
