@@ -9,6 +9,8 @@ import android.database.sqlite.SQLiteOpenHelper;
  */
 public class DBManger extends SQLiteOpenHelper {
 
+    private DBManger dbManger;
+
 
     public DBManger(Context context, String name, SQLiteDatabase.CursorFactory factory, int version) {
         super(context, name, factory, version);
@@ -17,13 +19,19 @@ public class DBManger extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
 
-        db.execSQL("CREATE TABLE DBTEST1(_id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT,  age INTEGER, )");
-
+        db.execSQL("CREATE TABLE PHONE(id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT,  age INTEGER, phone INTEGER)");
 
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
+
+    }
+
+    public void insert(String id){
+        SQLiteDatabase db = getWritableDatabase();
+        dbManger.insert("insert into PHONE values(null, name, age, phone);");
+
 
     }
 
