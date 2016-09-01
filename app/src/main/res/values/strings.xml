@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">dbTest2</string>
+    <string name="open">전화번호부태잉</string>
+    <string name="close">전화번호부태잉</string>
 </resources>
